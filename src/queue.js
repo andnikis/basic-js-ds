@@ -21,7 +21,7 @@ class Queue {
     this.head = null;
   }
 
-  isEmpty(){
+  isEmpty() {
     return this.head === null;
   }
 
@@ -32,8 +32,7 @@ class Queue {
   enqueue(value) {
     let node = new ListNode(value);
 
-    if (this.isEmpty())
-      this.head = node;
+    if (this.isEmpty()) this.head = node;
     // find the last element
     else {
       let current = this.head;
@@ -44,8 +43,7 @@ class Queue {
 
   dequeue() {
     // there should be throw
-    if (this.isEmpty())
-      return undefined;
+    if (this.isEmpty()) return undefined;
 
     // change the head
     let firstValue = this.head.value;
